@@ -16,7 +16,7 @@ import pe.com.vass.mock.app.model.response.ValidateSmsResponseModel;
 public class ValidateSmsController {
 
     @PostMapping("validateSms")       //user
-    public ResponseEntity authValidation(ValidateSmsRequestModel parameter ) { //User
+    public ResponseEntity validateSV(ValidateSmsRequestModel parameter ) { //User
 
         ValidateSmsResponseModel r = new ValidateSmsResponseModel();
 

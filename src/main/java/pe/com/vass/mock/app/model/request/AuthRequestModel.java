@@ -5,14 +5,28 @@ import lombok.Setter;
 
 public class AuthRequestModel {
 
-    @Getter
-    @Setter
+
     private String clientId;
 
-    @Getter
-    @Setter
+
     private String clientPassword;
 
+    public AuthRequestModel() {
+    }
 
+    public String getClientId() {
+        return clientId;
+    }
 
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
+    }
+
+    public String getClientPassword() {
+        return clientPassword;
+    }
+
+    public void setClientPassword(String clientPassword) {
+        this.clientPassword = clientPassword;
+    }
 }

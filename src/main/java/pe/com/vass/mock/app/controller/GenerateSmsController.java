@@ -16,7 +16,7 @@ import pe.com.vass.mock.app.model.response.GenerateSmsResponseModel;
 public class GenerateSmsController {
 
     @PostMapping("generateSms")       //user
-    public ResponseEntity authValidation(GenerateSmsRequestModel parameter ) { //User
+    public ResponseEntity generateSV(GenerateSmsRequestModel parameter ) { //User
 
         GenerateSmsResponseModel r = new GenerateSmsResponseModel();
 

@@ -15,7 +15,7 @@ import pe.com.vass.mock.app.model.response.GetDataResponseModel;
 public class GetDataController {
 
     @PostMapping("getData")       //user
-    public ResponseEntity authValidation(GetDataRequestModel parameter ) { //User
+    public ResponseEntity getDV(GetDataRequestModel parameter ) { //User
 
         GetDataResponseModel r = new GetDataResponseModel();
         r.setResponseCode(9);

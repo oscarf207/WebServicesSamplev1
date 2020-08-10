@@ -16,7 +16,7 @@ import pe.com.vass.mock.app.model.response.SendDataResponseModel;
 public class SendDataController {
 
     @PostMapping("sendData")       //user
-    public ResponseEntity authValidation(SendDataRequestModel parameter ) { //User
+    public ResponseEntity sendDV(SendDataRequestModel parameter ) { //User
 
         SendDataResponseModel r = new SendDataResponseModel();
 

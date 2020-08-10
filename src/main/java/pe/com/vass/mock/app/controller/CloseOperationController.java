@@ -14,7 +14,7 @@ import pe.com.vass.mock.app.model.response.CloseOperationResponseModel;
 public class CloseOperationController {
 
     @PostMapping("closeOperation")       //user
-    public ResponseEntity authValidation(CloseOperationRequestModel parameter ) { //User
+    public ResponseEntity closeOV(CloseOperationRequestModel parameter ) { //User
 
         CloseOperationResponseModel r = new CloseOperationResponseModel();
 
