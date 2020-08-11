@@ -5,9 +5,16 @@ import lombok.Setter;
 
 public class AuthResponseModel extends BaseResponse {
 
-    @Getter
-    @Setter
     private String authKey;
 
+    public AuthResponseModel() {
+    }
 
+    public String getAuthKey() {
+        return authKey;
+    }
+
+    public void setAuthKey(String authKey) {
+        this.authKey = authKey;
+    }
 }

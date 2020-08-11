@@ -32,18 +32,30 @@ public class AuthController {
 
 
         AuthResponseModel r = new AuthResponseModel();
-        r.setResponseCode(8);
+
+        int a=322;
+
+
+        //r.setResponseCode(8);
+        r.setResponseCode(a);
         r.setResponseMessage("OK");
 
-        String token = getJwtoken(parameter.getClientId(), parameter.getClientPassword());
+        //String token = getJwtoken(parameter.getClientId(), parameter.getClientPassword());
+        String token = Jwts.builder().setId("softJWT").setSubject(parameter.getClientId())
+                .setIssuedAt(new Date(System.currentTimeMillis()))
+                .setExpiration(new Date(System.currentTimeMillis()+6000000))
+                .signWith(SignatureAlgorithm.HS512,parameter.getClientPassword().getBytes()).compact();
+        //String token = "tookenn";
+
         r.setAuthKey(token);
+        //r.setAuthKey("tokenTest");
 
         LOGGER.info(MockUtils.JsonToString(parameter));
         //System.out.println("dataa::"+parameter.getClientId()+" / "+parameter.getClientPassword()+"token :"+r.getAuthKey());
 
 
         ResponseEntity<AuthResponseModel> response = new ResponseEntity<AuthResponseModel>(r, HttpStatus.OK);
-        LOGGER.info(MockUtils.JsonToString(parameter));
+        //LOGGER.info(MockUtils.JsonToString(parameter));
 
         return response;
     }
